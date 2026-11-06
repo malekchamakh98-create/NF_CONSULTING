@@ -4,12 +4,9 @@ import About from '../components/About/About'
 import Services from '../components/Services/Services'
 import WhyUs from '../components/WhyUs/WhyUs'
 import Approach from '../components/Approach/Approach'
-import Stats from '../components/Stats/Stats'
+import Values from '../components/Values/Values'
 import Financing from '../components/Financing/Financing'
-import Projects from '../components/Projects/Projects'
-import Testimonials from '../components/Testimonials/Testimonials'
 import Contact from '../components/Contact/Contact'
-import Newsletter from '../components/Newsletter/Newsletter'
 
 export default function Home() {
   useEffect(() => {
@@ -21,12 +18,13 @@ export default function Home() {
     els.forEach((el) => io.observe(el))
     const id = window.location.hash.slice(1)
     if (id) document.getElementById(id)?.scrollIntoView()
+    else window.scrollTo(0, 0)
     return () => io.disconnect()
   }, [])
   return (
     <main id="top">
-      <Hero /><About /><Services /><WhyUs /><Approach /><Stats />
-      <Financing /><Projects /><Testimonials /><Contact /><Newsletter />
+      <Hero /><About /><Services /><WhyUs /><Approach /><Values />
+      <Financing /><Contact />
     </main>
   )
 }

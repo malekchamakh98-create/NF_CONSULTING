@@ -1,4 +1,4 @@
-const items = ['Financement bancaire', 'Leasing', 'Aides et subventions', 'Financement de trésorerie', 'Autres mécanismes financiers']
+const items = ['Financement bancaire', 'Leasing', 'Subventions', 'Financement de trésorerie et d’investissement', 'Autres dispositifs financiers']
 
 export default function Financing() {
   return (

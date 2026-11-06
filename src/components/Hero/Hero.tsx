@@ -2,9 +2,9 @@ export default function Hero() {
   return (
     <div className="hero"><div className="wrap grid">
       <div>
-        <span className="badge">CONSEIL • FINANCE • ADMINISTRATION</span>
-        <h1>Votre partenaire pour une gestion <em>plus simple</em>, plus structurée et plus performante.</h1>
-        <p className="d">NF Consulting accompagne les entreprises dans l'optimisation de leur gestion financière, administrative, RH et comptable.</p>
+        <span className="badge">FACILITY MANAGEMENT &amp; CONSULTING</span>
+        <h1>Votre partenaire en gestion <em>financière et administrative</em>.</h1>
+        <p className="d">Externalisation DAF : réduisez vos coûts, boostez vos performances. NF Consulting accompagne les PME dans l'optimisation de leurs fonctions financières, administratives et RH.</p>
         <div className="cta">
           <a className="btn btn-gold" href="/#contact">Parler à un consultant →</a>
           <a className="btn btn-ghost" href="/#expertises">Découvrir nos expertises</a>
@@ -20,7 +20,7 @@ export default function Hero() {
         <div className="fc a"><small>Cash Flow</small><b>+18.4%</b></div>
         <div className="fc b"><small>Budget</small><b>94%</b></div>
         <div className="fc c"><small>Performance</small><b>Optimisée</b></div>
-        <span className="note">Illustration fictive, non contractuelle</span>
+        <span className="note">Illustration</span>
       </div>
     </div></div>
   )

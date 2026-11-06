@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { company } from '../../config/company'
-
-const links = [
-  ['Accueil', '/#top'], ['À propos', '/#apropos'], ['Notre approche', '/#approche'], ['Contact', '/#contact'],
-]
-const expertises = ['Finance & DAF', 'Gestion administrative', 'Recouvrement', 'Ressources humaines', 'Comptabilité France & Belgique']
+import { services } from '../../data/services'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -19,6 +16,7 @@ export default function Header() {
     return () => { window.removeEventListener('scroll', on); window.removeEventListener('keydown', esc) }
   }, [])
 
+  const close = () => setOpen(false)
   return (
     <>
       <header className={scrolled ? 'scrolled' : ''}>
@@ -33,10 +31,11 @@ export default function Header() {
               <li className="has-dd">
                 <button className="dd" aria-haspopup="true">Expertises ▾</button>
                 <ul className="menu">
-                  {expertises.map((e) => <li key={e}><a href="/#expertises">{e}</a></li>)}
+                  {services.map((s) => <li key={s.slug}><Link to={`/expertises/${s.slug}`}>{s.title}</Link></li>)}
                 </ul>
               </li>
-              {links.slice(2).map(([l, h]) => <li key={l}><a href={h}>{l}</a></li>)}
+              <li><a href="/#approche">Notre approche</a></li>
+              <li><a href="/#contact">Contact</a></li>
             </ul>
           </nav>
           <a className="btn btn-gold hd-cta" href="/#contact">Parler à un consultant <span aria-hidden="true">→</span></a>
@@ -46,11 +45,13 @@ export default function Header() {
         </div>
       </header>
       <div className={`drawer ${open ? 'open' : ''}`} aria-hidden={!open}>
-        <button className="x" aria-label="Fermer le menu" onClick={() => setOpen(false)}>×</button>
-        {[...links.slice(0, 2), ['Expertises', '/#expertises'], ...links.slice(2)].map(([l, h]) => (
-          <a key={l} className="l" href={h} onClick={() => setOpen(false)}>{l}</a>
-        ))}
-        <a className="btn btn-gold" href="/#contact" onClick={() => setOpen(false)}>Parler à un consultant →</a>
+        <button className="x" aria-label="Fermer le menu" onClick={close}>×</button>
+        <a className="l" href="/#top" onClick={close}>Accueil</a>
+        <a className="l" href="/#apropos" onClick={close}>À propos</a>
+        <a className="l" href="/#expertises" onClick={close}>Expertises</a>
+        <a className="l" href="/#approche" onClick={close}>Notre approche</a>
+        <a className="l" href="/#contact" onClick={close}>Contact</a>
+        <a className="btn btn-gold" href={company.phoneHref} onClick={close}>Appeler le {company.phoneLabel}</a>
       </div>
     </>
   )
