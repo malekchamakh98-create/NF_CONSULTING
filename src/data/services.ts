@@ -30,6 +30,7 @@ export const services: Service[] = [
     short: 'Formalités, relations avec les institutions, procédures et documentation.',
     intro: "NF Consulting prend en charge l'ensemble de vos formalités administratives : coordination avec les administrations, gestion des correspondances et organisation des tâches, pour vous permettre de vous concentrer sur l'essentiel.",
     items: [
+      'PME et entreprises : Des entreprises en croissance qui cherchent à externaliser une partie de leurs opérations ou à nouer un partenariat durable.',
       'Création et domiciliation de sociétés pour différentes activités, avec accompagnement personnalisé sur les avantages fiscaux et financiers',
       'Relations et suivi auprès des institutions (fiscalité, CNSS, API, APIA, CEPEX, etc.)',
       'Gestion de la correspondance',
@@ -70,7 +71,7 @@ export const services: Service[] = [
   {
     slug: 'comptabilite-france-belgique', n: '05', title: 'Comptabilité France & Belgique',
     short: 'Externalisation de votre comptabilité pour vos activités en France et en Belgique.',
-    intro: "NF Consulting prend en charge l'externalisation de votre comptabilité pour vos activités en France et en Belgique, en coordination étroite avec votre direction et vos autres services, pour des chiffres fiables et des obligations maîtrisées.",
+    intro: "NF CONSULTING Tunisie est un centre basé à Tunis, en Tunisie, qui opère au quotidien pour des cabinets, des entreprises et des organisations établis en BELGIQUE et en France. Notre vocation est simple : offrir à nos partenaires un prolongement fiable de leurs équipes en comptabilité, en technologie, en accompagnement d'experts et en assistance administrative et juridique — avec la même constance et la même exigence. Nous avons construit une organisation où la qualité d'exécution, la confidentialité et le respect des engagements ne sont pas des promesses mais des méthodes de travail. Nos équipes évoluent dans un environnement international, structuré autour de standards professionnels élevés. Cette exigence est aussi ce qui rend l'aventure attractive pour les talents : travailler chez NF CONSULTING Tunisie, c''est se former au contact de marchés matures et de pratiques rigoureuses.",
     items: [
       'Tenue et suivi de la comptabilité (saisie, rapprochements, justificatifs)',
       'Préparation des déclarations fiscales et sociales',
